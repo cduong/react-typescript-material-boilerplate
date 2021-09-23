@@ -14,12 +14,14 @@ The package includes:
 ## Requirements
 
 - `Node.js >= 10.0.0` (Dockerfile uses v16)
-- `Yarn >= 1.0.0`
+- `Yarn >= 3.0.0`
 
 ## Quick Start 
 
 1. `git clone https://github.com/cduong/react-typescript-material-boilerplate.git` - clone the repository
 2. `cd react-typescript-material-boilerplate` - enter the cloned directory
+3. If Yarn is not installed: `npm i yarn`
+4. `yarn set version berry` to set project version of Yarn 
 
 # Docker
 1. docker-compose build
@@ -27,7 +29,6 @@ The package includes:
 3. Access http://localhost:9000
 
 # Local (with webpack-dashboard)
-0. If Yarn is not installed: `npm i yarn`
 1. `yarn install` - install dependencies using Yarn
 2. `yarn start` - run the development server
 3. Access http://localhost:9000/
