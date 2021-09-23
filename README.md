@@ -27,9 +27,7 @@ The package includes:
 3. Access http://localhost:9000
 
 # Local (with webpack-dashboard)
-0. If Yarn is not installed:
-`npm i yarn`
-
+0. If Yarn is not installed: `npm i yarn`
 1. `yarn install` - install dependencies using Yarn
 2. `yarn start` - run the development server
 3. Access http://localhost:9000/
