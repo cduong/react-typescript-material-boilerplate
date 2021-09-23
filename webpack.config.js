@@ -12,11 +12,13 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   devServer: {
+    host: '0.0.0.0',
     historyApiFallback: true,
     hot: true,
     inline: true,
     overlay: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    port: 9000,
   },
   devtool: isProduction ? 'source-map' : 'eval-source-map',
   entry: './src/index',
