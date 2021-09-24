@@ -15,11 +15,13 @@ module.exports = {
     host: '0.0.0.0',
     historyApiFallback: true,
     hot: true,
-    inline: true,
-    overlay: true,
-    stats: 'minimal',
+    client: {
+      progress: true,
+      overlay: true,
+    },
     port: 9000,
   },
+  stats: 'minimal',
   devtool: isProduction ? 'source-map' : 'eval-source-map',
   entry: './src/index',
   mode: process.env.NODE_ENV,
@@ -83,7 +85,6 @@ module.exports = {
         test: /\.html$/,
         loader: 'html-loader',
         options: {
-          interpolate: true,
           minimize: isProduction
         }
       }

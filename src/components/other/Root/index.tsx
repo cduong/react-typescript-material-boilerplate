@@ -1,12 +1,11 @@
 import React from 'react'
-import {Router, Redirect, Switch} from 'react-router-dom'
+import {Route, BrowserRouter, Switch} from 'react-router-dom'
 import {MuiThemeProvider} from '@material-ui/core/styles'
 
 import {CssBaseline} from 'components/shared'
-import Route from 'components/other/Route'
+import ProtectedRoute from 'components/other/Route'
 import DashboardLayout from 'components/layout/DashboardLayout'
 import UnsignedLayout from 'components/layout/UnsignedLayout'
-import history from 'routing/routerHistory'
 import routes from 'routing/routes'
 import {useDispatch} from 'store'
 import * as userActions from 'store/user/actions'
@@ -32,13 +31,14 @@ const Root = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Router history={history}>
+      <BrowserRouter>
         <Switch>
-          <Route requiresAuth path={signedPaths} component={DashboardLayout} />
-          <Route inaccessibleWithToken path={unsignedPaths} component={UnsignedLayout} />
-          <Redirect to={routes.signed.dashboard} />
+          <ProtectedRoute path={signedPaths} component={DashboardLayout} />
+          <Route path={unsignedPaths} component={UnsignedLayout} />
+          {/* default route */}
+          <ProtectedRoute component={DashboardLayout} />
         </Switch>
-      </Router>
+      </BrowserRouter>
     </MuiThemeProvider>
   )
 }

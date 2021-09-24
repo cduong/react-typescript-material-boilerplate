@@ -5,13 +5,12 @@ import {ContainerProps} from '@material-ui/core/Container'
 
 import useStyles from './styles'
 
-type Props = {
-  maxWidth?: string
+type WrappedContainerProps = {
   navbar?: boolean
   padded?: boolean
-} & ContainerProps
+} & ContainerProps<any>
 
-const WrappedContainer = ({children, navbar, padded = true, maxWidth = 'xl', component = 'main', ...rest}: Props) => {
+const WrappedContainer = ({children, navbar, padded = true, maxWidth = 'xl', component = 'main', ...rest}: WrappedContainerProps) => {
   const {horPadding, navbarMargin} = useStyles()
   const className = classnames({
     [horPadding]: padded,

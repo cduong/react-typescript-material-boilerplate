@@ -1,7 +1,7 @@
 export default {
   base: '/',
   unsigned: {
-    signin: '/sign-in'
+    signin: '/login'
   },
   signed: {
     dashboard: '/dashboard'

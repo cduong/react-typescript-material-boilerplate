@@ -20,7 +20,7 @@ The package includes:
 
 1. `git clone https://github.com/cduong/react-typescript-material-boilerplate.git` - clone the repository
 2. `cd react-typescript-material-boilerplate` - enter the cloned directory
-3. If Yarn is not installed: `npm i yarn`
+3. If Yarn is not installed: `npm install -g yarn`
 4. `yarn set version berry` to set project version of Yarn 
 
 # Docker
@@ -48,6 +48,21 @@ To run tasks type `yarn <taskNameHere>` or `npm run <taskNameHere>`. Tasks list:
 - `test:watch` - run tests in watch mode. Usable for development
 - `test:coverage` - run tests and generate test coverage report
 - `bundle-analyzer` - runs bundle analyzer of the production build
+
+## VS Code 
+
+A little bit of setup is required for VSCode to recognize our TypeScript type definitions:
+
+Run `yarn dlx @yarnpkg/sdks vscode`
+
+Set your workspace TypeScript version:
+1. Press Ctrl/Cmd+Shift+P in a TypeScript file
+2. Choose "Select TypeScript Version"
+3. Pick "Use Workspace Version"
+
+Source: https://yarnpkg.com/getting-started/editor-sdks
+
+TODO: Add Typescript plugin
 
 ## Contribution
 
