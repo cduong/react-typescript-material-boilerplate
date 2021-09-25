@@ -3,7 +3,7 @@ import {Route, BrowserRouter, Switch} from 'react-router-dom'
 import {MuiThemeProvider} from '@material-ui/core/styles'
 
 import {CssBaseline} from 'components/shared'
-import ProtectedRoute from 'components/other/Route'
+import ProtectedRoute from 'components/other/ProtectedRoute'
 import DashboardLayout from 'components/layout/DashboardLayout'
 import UnsignedLayout from 'components/layout/UnsignedLayout'
 import routes from 'routing/routes'
@@ -16,6 +16,7 @@ import useStyles from './styles'
 
 const signedPaths = Object.values(routes.signed)
 const unsignedPaths = Object.values(routes.unsigned)
+
 
 const Root = () => {
   // Inject @global styles
